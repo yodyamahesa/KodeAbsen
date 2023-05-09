@@ -77,12 +77,13 @@
         android:id="@+id/masuk_Login_Button"
         android:layout_width="318dp"
         android:layout_height="48dp"
+        android:layout_below="@id/logoapp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
         android:layout_marginEnd="116dp"
-        android:layout_below="@id/logoapp"
         android:backgroundTint="@color/biruKodeAbsen"
-        android:text="Masuk" />
+        android:text="Masuk"
+        app:cornerRadius="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

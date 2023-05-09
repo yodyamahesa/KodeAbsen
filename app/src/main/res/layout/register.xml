@@ -38,7 +38,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="40dp"
             android:hint="Username"
-            android:id="@+id/username"/>
+            android:id="@+id/username_Register_EditText"/>
 
     </LinearLayout>
 
@@ -60,10 +60,10 @@
             android:layout_below="@id/logoorang"/>
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/email_Register_EditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/username"
+            android:layout_below="@id/username_Register_EditText"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="14dp"
             android:layout_marginRight="40dp"
@@ -89,7 +89,7 @@
             android:layout_below="@id/logomail"/>
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_Register_EditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
@@ -117,7 +117,7 @@
             android:layout_below="@id/logomail"/>
 
         <EditText
-            android:id="@+id/confirmpassword"
+            android:id="@+id/confirmpassword_Register_EditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
@@ -128,14 +128,15 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/daftar_Register_Button"
         android:layout_width="318dp"
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="116dp"
         android:backgroundTint="@color/biruKodeAbsen"
-        android:text="Daftar"/>
+        android:text="Daftar"
+        app:cornerRadius="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -151,8 +152,8 @@
             android:text="Dengan mendaftar, anda menyetujui"
             android:textSize="18sp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/btnLogin"
-            android:layout_marginTop="50dp"/>
+            android:layout_below="@id/confirmpassword_Register_EditText"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -162,7 +163,7 @@
             android:layout_marginTop="5dp"
             android:textSize="18sp"
             android:textColor="@color/biruKodeAbsen"
-            android:layout_below="@id/btnLogin"/>
+            android:layout_below="@id/daftar_Register_Button"/>
 
     </LinearLayout>
 
