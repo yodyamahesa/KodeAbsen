@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KodeAbsen"
         tools:targetApi="31">
+        <activity android:name=".Login"/>
+        <activity android:name=".Register"/>
+        <activity android:name=".RegisterDone"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

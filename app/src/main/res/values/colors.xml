@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="biruKodeAbsen">#4377BC</color>
+    <color name="merahKodeAbsen">#BC4343</color>
+    <color name="hijauKodeAbsen">#40B55A</color>
+    <color name="putihKodeAbsen">#FFFFFF</color>
+    <color name="abuterangKodeAbsen">#A6A6A6</color>
+    <color name="abugelapKodeAbsen">#535353</color>
+    <color name="hitamKodeAbsen">#1E1E1E</color>
 </resources>
