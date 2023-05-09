@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <ImageView
+        android:id="@+id/logoapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo_kodeabsen"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        android:id="@+id/logoapp"/>
+        android:src="@drawable/logo_kodeabsen" />
 
 
     <LinearLayout
@@ -38,10 +38,12 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="40dp"
             android:hint="Username"
-            android:id="@+id/username"/>
+            android:inputType="textPersonName"
+            android:id="@+id/username_Login_EditText"/>
 
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,9 +62,10 @@
             android:layout_below="@id/logoorang"/>
 
         <EditText
+            android:id="@+id/password_Login_EditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/username"
+            android:layout_below="@id/username_Login_EditText"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="14dp"
             android:layout_marginRight="40dp"
@@ -71,19 +74,20 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/masuk_Login_Button"
         android:layout_width="318dp"
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="116dp"
+        android:layout_below="@id/logoapp"
         android:backgroundTint="@color/biruKodeAbsen"
-        android:text="Masuk"/>
+        android:text="Masuk" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnLogin"
+        android:layout_below="@id/masuk_Login_Button"
         android:orientation="horizontal"
         android:gravity="center">
 
@@ -93,16 +97,17 @@
             android:text="Belum punya akun? "
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/btnLogin"/>
+            android:layout_below="@id/masuk_Login_Button"/>
 
         <TextView
+            android:id="@+id/daftar_Login_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Daftar di sini"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:textColor="@color/biruKodeAbsen"
-            android:layout_below="@id/btnLogin"/>
+            android:layout_below="@id/masuk_Login_Button"/>
 
     </LinearLayout>
 

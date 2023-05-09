@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Register">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -60,6 +60,7 @@
             android:layout_below="@id/logoorang"/>
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/username"
@@ -88,6 +89,7 @@
             android:layout_below="@id/logomail"/>
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
@@ -111,10 +113,11 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="40dp"
             android:src="@drawable/lock"
-            android:id="@+id/logomail"
+            android:id="@+id/logolock2"
             android:layout_below="@id/logomail"/>
 
         <EditText
+            android:id="@+id/confirmpassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
