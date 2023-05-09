@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "665615562860",
+    "project_id": "kodeabsen",
+    "storage_bucket": "kodeabsen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665615562860:android:bcc0380c8516bdf58b8049",
+        "android_client_info": {
+          "package_name": "com.example.kodeabsen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665615562860-cimeto1mbeeq720hi27cf8rd42ep4sd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfhJa5mG1b0jdrmfdfKnoxwcz2e2B7nqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "665615562860-cimeto1mbeeq720hi27cf8rd42ep4sd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

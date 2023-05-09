@@ -2,11 +2,10 @@ package com.example.kodeabsen
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class RegisterDone: AppCompatActivity() {
+class ActivityRegisterDone: AppCompatActivity() {
 
     lateinit var okeButton: Button
 
@@ -15,14 +14,14 @@ class RegisterDone: AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register_done)
+        setContentView(R.layout.activity_register_done)
 
         initComponents()
 
         okeButton.setOnClickListener{
-            val keLogin = Intent(this, Login::class.java)
+            val keActivityLogin = Intent(this, ActivityLogin::class.java)
             finish()
-            startActivity(keLogin)
+            startActivity(keActivityLogin)
         }
     }
 }

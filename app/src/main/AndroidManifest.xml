@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,10 +14,10 @@
         android:theme="@style/Theme.KodeAbsen"
         tools:targetApi="31">
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Register"/>
-        <activity android:name=".RegisterDone"/>
+        <activity android:name=".ActivityRegister"/>
+        <activity android:name=".ActivityRegisterDone"/>
         <activity
-            android:name=".Login"
+            android:name=".ActivityLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

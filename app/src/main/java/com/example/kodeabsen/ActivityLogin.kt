@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class Login: AppCompatActivity() {
+class ActivityLogin: AppCompatActivity() {
 
     lateinit var usernameEditText: EditText
     lateinit var passwordEditText: EditText
@@ -22,7 +22,7 @@ class Login: AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login)
+        setContentView(R.layout.activity_login)
 
         initComponents()
 
@@ -31,8 +31,8 @@ class Login: AppCompatActivity() {
         }
 
         daftarTextView.setOnClickListener{
-            val keRegister = Intent(this,Register::class.java)
-            startActivity(keRegister)
+            val keActivityRegister = Intent(this,ActivityRegister::class.java)
+            startActivity(keActivityRegister)
         }
     }
 
