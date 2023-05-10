@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:layout_marginLeft="40dp"
-            android:src="@drawable/gambar_orang"
+            android:src="@drawable/mail"
             android:id="@+id/logoorang"/>
 
         <EditText
@@ -37,10 +37,9 @@
             android:layout_marginTop="61dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="40dp"
-            android:hint="Username"
+            android:hint="Alamat Email"
             android:inputType="textPersonName"
-            android:id="@+id/username_Login_EditText"/>
-
+            android:id="@+id/email_Login_EditText"/>
 
     </LinearLayout>
 
@@ -65,7 +64,7 @@
             android:id="@+id/password_Login_EditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/username_Login_EditText"
+            android:layout_below="@id/email_Login_EditText"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="14dp"
             android:layout_marginRight="40dp"
