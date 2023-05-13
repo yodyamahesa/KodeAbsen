@@ -44,7 +44,7 @@ class ActivityLogin: AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            val keActivityHome = Intent(this, ActivityHome::class.java)
+                            val keActivityHome = Intent(this, ActivityBeranda::class.java)
                             finish()
                             keActivityHome.putExtra("email","Email: $email")
                             startActivity(keActivityHome)
