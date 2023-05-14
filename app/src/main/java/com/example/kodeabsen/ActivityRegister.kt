@@ -12,14 +12,14 @@ import com.google.firebase.ktx.Firebase
 
 class ActivityRegister: AppCompatActivity() {
 
-    lateinit var usernameRegisterEditText: EditText
-    lateinit var emailRegisterEditText: EditText
-    lateinit var passwordRegisterEditText: EditText
-    lateinit var confirmpasswordRegisterEditText: EditText
-    lateinit var daftarButton: Button
+    private lateinit var usernameRegisterEditText: EditText
+    private lateinit var emailRegisterEditText: EditText
+    private lateinit var passwordRegisterEditText: EditText
+    private lateinit var confirmpasswordRegisterEditText: EditText
+    private lateinit var daftarButton: Button
     private lateinit var auth: FirebaseAuth
 
-    fun initComponnents(){
+    private fun initComponnents(){
         usernameRegisterEditText = findViewById(R.id.username_Register_EditText)
         emailRegisterEditText = findViewById(R.id.email_Register_EditText)
         passwordRegisterEditText = findViewById(R.id.password_Register_EditText)

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">KodeAbsen</string>
+
+    <string-array name="spinner_beranda">
+        <item>Kelas Terbaru</item>
+        <item>Kelas Terlama</item>
+        <item>Nama Kelas</item>
+    </string-array>
+
 </resources>

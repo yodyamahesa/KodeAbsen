@@ -84,9 +84,10 @@
         app:layout_constraintTop_toBottomOf="@+id/AtasNavbar">
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinnerBerandaa"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:paddingStart="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guidelineKiriVertical3"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.40" />
+            app:layout_constraintGuide_percent="0.50" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineKiriVertical4"
@@ -124,12 +125,13 @@
 
     <ScrollView
         android:id="@+id/ScrollUtama"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TengahNavbar" />
+        app:layout_constraintTop_toBottomOf="@+id/TengahNavbar"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BawahNavbar"
@@ -212,12 +214,5 @@
         app:layout_constraintGuide_percent="0.88
 
 " />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="409dp"
-        android:layout_height="673dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="149dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

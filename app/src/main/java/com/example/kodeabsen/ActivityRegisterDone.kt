@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 
 class ActivityRegisterDone: AppCompatActivity() {
 
-    lateinit var okeButton: Button
+    private lateinit var okeButton: Button
 
-    fun initComponents(){
+    private fun initComponents(){
         okeButton = findViewById(R.id.oke_RegisterDone_Button)
     }
     override fun onCreate(savedInstanceState: Bundle?) {

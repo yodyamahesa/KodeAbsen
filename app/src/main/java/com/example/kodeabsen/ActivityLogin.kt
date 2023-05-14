@@ -13,13 +13,13 @@ import com.google.firebase.ktx.Firebase
 
 class ActivityLogin: AppCompatActivity() {
 
-    lateinit var emailEditText: EditText
-    lateinit var passwordEditText: EditText
-    lateinit var masukButton: Button
-    lateinit var daftarTextView: TextView
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var masukButton: Button
+    private lateinit var daftarTextView: TextView
     private lateinit var auth: FirebaseAuth
 
-    fun initComponents(){
+    private fun initComponents(){
         emailEditText = findViewById(R.id.email_Login_EditText)
         passwordEditText = findViewById(R.id.password_Login_EditText)
         masukButton = findViewById(R.id.masuk_Login_Button)
