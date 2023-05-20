@@ -1,16 +1,21 @@
 package com.example.kodeabsen
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
 class ActivityBeranda: AppCompatActivity() {
 
     private lateinit var berandaSpinner: Spinner
+    private lateinit var profileImageView: ImageView
+
 
     private fun initComponents(){
         berandaSpinner = findViewById(R.id.spinnerBerandaa)
+        profileImageView = findViewById(R.id.imageView3)
     }
 
     private fun isiSpinner(){
@@ -32,5 +37,11 @@ class ActivityBeranda: AppCompatActivity() {
 
         initComponents()
         isiSpinner()
+        profileImageView.setOnClickListener {
+            val keActivityProfile = Intent(this, ActivityProfile::class.java)
+
+            startActivity(keActivityProfile)
+        }
+
     }
 }

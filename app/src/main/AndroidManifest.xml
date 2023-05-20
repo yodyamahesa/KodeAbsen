@@ -23,8 +23,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityBeranda"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityProfile"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".ActivityLogin"
+            android:name=".ActivitySplash"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
