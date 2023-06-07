@@ -13,13 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KodeAbsen"
         tools:targetApi="31">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
         <activity android:name=".ActivityRegister"
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityRegisterDone"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityHome"
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityBeranda"
             android:screenOrientation="portrait"/>
@@ -27,6 +23,11 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityProfile"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityAbsenQR"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityAbsenKode"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".ActivitySplash"
             android:screenOrientation="portrait"

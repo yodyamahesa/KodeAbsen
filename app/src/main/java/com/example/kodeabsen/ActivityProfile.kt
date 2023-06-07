@@ -9,8 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 class ActivityProfile: AppCompatActivity() {
 
     private lateinit var berandaImageView: ImageView
+    private lateinit var absenImageView: ImageView
+
     private fun initComponents(){
         berandaImageView=findViewById(R.id.imageView)
+        absenImageView = findViewById(R.id.imageView2)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +23,14 @@ class ActivityProfile: AppCompatActivity() {
 
         berandaImageView.setOnClickListener {
             val keActivityBeranda = Intent(this, ActivityBeranda::class.java)
-
                 startActivity(keActivityBeranda)
+                finish()
+        }
 
+        absenImageView.setOnClickListener {
+            val keActivityAbsenQR = Intent(this, ActivityAbsenQR::class.java)
+            startActivity(keActivityAbsenQR)
+            finish()
         }
     }
 
