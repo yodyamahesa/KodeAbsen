@@ -72,6 +72,9 @@ class ActivityBeranda: AppCompatActivity() {
                 // Aksi untuk Menambahkan Kelas
                 // Tambahkan kode yang sesuai di sini
                 dialog.dismiss()
+                finish()
+                val keActivityBuatKelas = Intent(this, ActivityBuatKelas1::class.java)
+                startActivity(keActivityBuatKelas)
             }
 
             buttonGabungKelas.setOnClickListener {

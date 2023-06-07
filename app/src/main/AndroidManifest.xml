@@ -27,6 +27,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityAbsenKode"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityBuatKelas1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityBuatKelas2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityBuatKelas3"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".ActivitySplash"
