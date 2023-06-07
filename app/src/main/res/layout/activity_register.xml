@@ -90,17 +90,23 @@
 
         <EditText
             android:id="@+id/password_Register_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="14dp"
-            android:layout_marginRight="40dp"
             android:hint="Password" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/icon_mata_hitam" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="1000dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/lay4"
@@ -116,14 +122,32 @@
             android:id="@+id/logolock2"
             android:layout_below="@id/logomail"/>
 
+
+
         <EditText
             android:id="@+id/confirmpassword_Register_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="14dp"
-            android:layout_marginRight="40dp"
-            android:hint="Confirm Password" />
+            android:hint="Confirm Password"/>
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/icon_mata_hitam" />
+
+
+
+
+
+
+
+
+
+
 
     </LinearLayout>
 
