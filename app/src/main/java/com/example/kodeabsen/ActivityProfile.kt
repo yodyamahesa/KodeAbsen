@@ -22,16 +22,18 @@ class ActivityProfile: AppCompatActivity() {
         initComponents()
 
         berandaImageView.setOnClickListener {
-            val keActivityBeranda = Intent(this, ActivityBeranda::class.java)
-                startActivity(keActivityBeranda)
-                finish()
+            val intent = Intent(this, ActivityBeranda::class.java)
+            TransisiActivity.transisiKeKiri_Finish(this,intent)
         }
 
         absenImageView.setOnClickListener {
-            val keActivityAbsenQR = Intent(this, ActivityAbsenQR::class.java)
-            startActivity(keActivityAbsenQR)
-            finish()
+            val intent = Intent(this, ActivityAbsenQR::class.java)
+            TransisiActivity.transisiKeAtas_Finish(this,intent)
         }
+    }
+
+    override fun onBackPressed() {
+        berandaImageView.performClick()
     }
 
 }

@@ -25,21 +25,23 @@ class ActivityAbsenKode: AppCompatActivity() {
         initComponents()
 
         tombolKembaliImageView.setOnClickListener {
-            val keActivityBeranda = Intent(this, ActivityBeranda::class.java)
-            startActivity(keActivityBeranda)
-            finish()
+            val intent = Intent(this, ActivityBeranda::class.java)
+            TransisiActivity.transisiKeBawah_Finish(this,intent)
         }
 
         tombolAbsenQRImageView.setOnClickListener {
-            val keActivityAbsenQR = Intent(this, ActivityAbsenQR::class.java)
-            startActivity(keActivityAbsenQR)
-            finish()
+            val intent = Intent(this, ActivityAbsenQR::class.java)
+            TransisiActivity.transisiKeKiri_Finish(this,intent)
         }
 
         tombolLanjutkanButton.setOnClickListener{
 
         }
 
-
     }
+
+    override fun onBackPressed() {
+        tombolKembaliImageView.performClick()
+    }
+
 }

@@ -74,46 +74,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/TengahNavbar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/border_bottom"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineTengahNavbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar">
-
-        <Spinner
-            android:id="@+id/spinnerBerandaa"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingStart="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineKiriVertical3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineKiriVertical3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.50121653" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <ScrollView
         android:id="@+id/ScrollUtama"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TengahNavbar"
-        />
+        app:layout_constraintTop_toTopOf="@+id/guidelineAtasNavbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BawahNavbar"
@@ -180,13 +149,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.12
 " />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTengahNavbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBawahNavbar"

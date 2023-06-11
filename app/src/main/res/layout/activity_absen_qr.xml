@@ -115,16 +115,18 @@
 
 " />
 
-    <SurfaceView
-        android:id="@+id/surfaceView"
+    <FrameLayout
+        android:id="@+id/frameKamera"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="40dp"
-        android:backgroundTint="@color/AbuTerangParah"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineBawahNavbar3"
+        android:background="@color/AbuTerangParah"
+        app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar" />
+        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar">
+
+    </FrameLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"

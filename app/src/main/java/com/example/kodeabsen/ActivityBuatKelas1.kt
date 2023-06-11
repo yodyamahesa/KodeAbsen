@@ -8,4 +8,5 @@ class ActivityBuatKelas1: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buatkelas_1)
     }
+
 }
