@@ -8,17 +8,18 @@ import android.os.Bundle
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.zxing.Result
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 
-class ActivityAbsenQR: AppCompatActivity() {
+class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
 
     private lateinit var tombolFlashImageView: ImageView
     private lateinit var tombolKembaliImageView: ImageView
     private lateinit var tombolAbsenKodeImageView: ImageView
     private lateinit var frameKameraFrameLayout: FrameLayout
     private lateinit var mScannerView: ZXingScannerView
-    private var isCaptured = false
-    private var flash = 0;
+    private lateinit var hasilScan: String
+    private var flash = false;
 
     private fun initComponents(){
         tombolFlashImageView = findViewById(R.id.flash)
@@ -28,9 +29,12 @@ class ActivityAbsenQR: AppCompatActivity() {
     }
 
     private fun initScannerView() {
+        doRequestPermission()
         mScannerView = ZXingScannerView(this)
         mScannerView.setAutoFocus(true)
+        mScannerView.setResultHandler(this)
         frameKameraFrameLayout.addView(mScannerView)
+        mScannerView.startCamera()
     }
 
     private fun doRequestPermission() {
@@ -45,7 +49,7 @@ class ActivityAbsenQR: AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             100 -> {
-                initScannerView()
+
             }
             else -> {
                 /* nothing to do in here */
@@ -59,18 +63,17 @@ class ActivityAbsenQR: AppCompatActivity() {
 
         initComponents()
         initScannerView()
-        doRequestPermission()
-        mScannerView.startCamera()
 
         tombolFlashImageView.setOnClickListener{
-            if(flash==0){
+            if(flash==false){
+                mScannerView.flash = true
                 tombolFlashImageView.setImageResource(R.drawable.icon_flash_on)
-                flash=1
+                flash=true
             }else{
+                mScannerView.flash = false
                 tombolFlashImageView.setImageResource(R.drawable.icon_flash_off)
-                flash=0
+                flash=false
             }
-
         }
 
         tombolKembaliImageView.setOnClickListener {
@@ -82,10 +85,19 @@ class ActivityAbsenQR: AppCompatActivity() {
             val intent = Intent(this, ActivityAbsenKode::class.java)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
         }
-
     }
 
     override fun onBackPressed() {
         tombolKembaliImageView.performClick()
+    }
+
+    override fun handleResult(rawResult: Result?) {
+        if (rawResult != null) {
+            hasilScan = rawResult.text.toString()
+            val intent = Intent(this, ActivityBeranda::class.java)
+            TransisiActivity.transisiKeBawah_Finish(this, intent)
+        }else{
+
+        }
     }
 }
