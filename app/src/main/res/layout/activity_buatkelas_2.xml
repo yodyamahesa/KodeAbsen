@@ -42,7 +42,7 @@
             app:layout_constraintGuide_percent="0.60097325" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imageView9424215"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:paddingStart="20dp"
@@ -88,7 +88,7 @@
         app:layout_constraintGuide_percent="0.78002244" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageView9512525"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
