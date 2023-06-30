@@ -51,64 +51,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/BawahNavbar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/border_top_bottom"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guidelineBawahNavbar">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineKiriVertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_beranda_abu" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineKananVertical"
-            app:layout_constraintStart_toStartOf="@+id/guidelineKiriVertical"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_qrcode" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_profil_biru" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineKiriVertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.33090025" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineKananVertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.66" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineAtasNavbar"
         android:layout_width="wrap_content"
@@ -129,58 +71,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBawahNavbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.88
-
-" />
+        app:layout_constraintGuide_percent="0.88098496" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
+        android:layout_width="109dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTengahNavbar3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineTengahNavbar"
         app:srcCompat="@drawable/icon_profile" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="7dp"
-        android:paddingRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTengahNavbar"
-        app:srcCompat="@drawable/logo_pensil" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:text="Yodya"
-        android:textColor="@color/hitamKodeAbsen"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTengahNavbar" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:text="Yodya123@gmail.com"
-        android:textColor="@color/abugelapKodeAbsen"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineTengahNavbar3"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTengahNavbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -197,9 +105,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="NIM"
+            android:hint="Username"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -208,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Semester"
+            android:hint="NIM"
             android:inputType="text"
             android:paddingTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -217,11 +126,37 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
 
         <EditText
-            android:id="@+id/editTextText6"
+            android:id="@+id/editTextText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Semester"
+            android:inputType="text"
+            android:paddingTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+
+        <EditText
+            android:id="@+id/editTextText7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Program Studi"
+            android:inputType="text"
+            android:paddingTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+
+        <EditText
+            android:id="@+id/editTextText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="E-mail"
             android:inputType="text"
             android:paddingTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -235,11 +170,20 @@
         android:layout_width="263dp"
         android:layout_height="46dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/merahKodeAbsen"
-        android:text="KELUAR"
-        app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
+        android:backgroundTint="@color/biruKodeAbsen"
+        android:text="Simpan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBawahNavbar"
+        app:srcCompat="@drawable/icon_kembali" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
