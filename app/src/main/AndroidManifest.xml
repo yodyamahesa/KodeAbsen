@@ -26,7 +26,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityRegisterDone"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityBeranda"
+        <activity android:name=".ActivitySplash"
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityLogin"
             android:screenOrientation="portrait"/>
@@ -44,12 +44,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityAbsenKelas"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ActivitySplash"
+        <activity android:name=".ActivityEditProfil"
             android:screenOrientation="portrait"/>
 
 
         <activity
-            android:name=".ActivityEditProfil"
+            android:name=".ActivityBeranda"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

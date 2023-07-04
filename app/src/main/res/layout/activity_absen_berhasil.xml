@@ -53,7 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.609"
-            app:srcCompat="@drawable/icon_header_gabungkelas" />
+            app:srcCompat="@drawable/icon_header_absen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

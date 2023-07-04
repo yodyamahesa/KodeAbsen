@@ -88,12 +88,16 @@ class ActivityBeranda: AppCompatActivity() {
                 // Aksi untuk Gabung Kelas
                 // Tambahkan kode yang sesuai di sini
                 dialog.dismiss()
+                val intent = Intent(this,ActivityGabungKelas::class.java)
+                intent.putExtra("email",email)
+                TransisiActivity.transisiKeAtas_Finish(this,intent)
             }
 
             buttonBatal.setOnClickListener {
                 dialog.dismiss()
             }
         }
+
 
     }
 }

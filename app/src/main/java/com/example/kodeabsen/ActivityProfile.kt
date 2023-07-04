@@ -10,10 +10,12 @@ class ActivityProfile: AppCompatActivity() {
 
     private lateinit var berandaImageView: ImageView
     private lateinit var absenImageView: ImageView
+    private lateinit var pensilImageView: ImageView
 
     private fun initComponents(){
         berandaImageView=findViewById(R.id.imageView)
         absenImageView = findViewById(R.id.imageView2)
+        pensilImageView = findViewById(R.id.imageView8)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +31,10 @@ class ActivityProfile: AppCompatActivity() {
         absenImageView.setOnClickListener {
             val intent = Intent(this, ActivityAbsenQR::class.java)
             TransisiActivity.transisiKeAtas_Finish(this,intent)
+        }
+        pensilImageView.setOnClickListener {
+            val intent = Intent(this, ActivityEditProfil::class.java)
+            TransisiActivity.transisiKeKiri_Finish(this,intent)
         }
     }
 

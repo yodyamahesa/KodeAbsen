@@ -51,7 +51,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guidelineKananVertical5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_header_gabungkelas" />
+            app:srcCompat="@drawable/icon_header_absen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
