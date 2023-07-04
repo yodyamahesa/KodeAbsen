@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class ActivityRegisterDone: AppCompatActivity() {
+class   ActivityRegisterDone: AppCompatActivity() {
 
     private lateinit var okeButton: Button
 
