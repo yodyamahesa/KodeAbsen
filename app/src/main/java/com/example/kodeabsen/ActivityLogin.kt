@@ -47,7 +47,7 @@ class ActivityLogin: AppCompatActivity() {
                         if (task.isSuccessful) {
                             val keActivityHome = Intent(this, ActivityBeranda::class.java)
                             finish()
-                            keActivityHome.putExtra("email","Email: $email")
+                            keActivityHome.putExtra("email",email)
                             startActivity(keActivityHome)
                         } else {
                             Toast.makeText(this, "Email atau Password Salah", Toast.LENGTH_SHORT)

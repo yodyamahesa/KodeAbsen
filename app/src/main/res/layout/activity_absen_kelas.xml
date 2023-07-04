@@ -60,6 +60,7 @@
         android:layout_height="46dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/biruKodeAbsen"
+        android:clickable="false"
         android:text="Absen"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
@@ -128,6 +129,7 @@
 
     <ImageView
         android:id="@+id/imageView99998"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
@@ -160,6 +162,7 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:ems="10"
         android:inputType="text"
         android:text="Pemrograman Mobile"
@@ -188,20 +191,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline11"
         app:srcCompat="@drawable/icon_user" />
 
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingRight="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText10"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:srcCompat="@drawable/ic_pensil_edit" />
-
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:ems="10"
         android:inputType="text"
         android:text="Prof Yodya"
@@ -210,18 +204,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline11"
         app:layout_constraintVertical_bias="0.485" />
-
-    <EditText
-        android:id="@+id/editTextText10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Semester 10"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"

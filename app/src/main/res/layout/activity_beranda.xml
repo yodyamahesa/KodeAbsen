@@ -74,16 +74,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
-        android:id="@+id/ScrollUtama"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineAtasNavbar" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BawahNavbar"
         android:layout_width="0dp"
@@ -157,5 +147,14 @@
         app:layout_constraintGuide_percent="0.88
 
 " />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,9 +5,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.google.zxing.Result
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 
@@ -19,6 +23,9 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
     private lateinit var frameKameraFrameLayout: FrameLayout
     private lateinit var mScannerView: ZXingScannerView
     private lateinit var hasilScan: String
+    private lateinit var kodemasuk: String
+    private lateinit var database: DatabaseReference
+
     private var flash = false;
 
     private fun initComponents(){
@@ -26,6 +33,8 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
         tombolKembaliImageView = findViewById(R.id.imageView18)
         tombolAbsenKodeImageView = findViewById(R.id.imageView20)
         frameKameraFrameLayout = findViewById(R.id.frameKamera)
+        database = Firebase.database.reference
+
     }
 
     private fun initScannerView() {
@@ -94,8 +103,27 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
     override fun handleResult(rawResult: Result?) {
         if (rawResult != null) {
             hasilScan = rawResult.text.toString()
-            val intent = Intent(this, ActivityBeranda::class.java)
-            TransisiActivity.transisiKeBawah_Finish(this, intent)
+
+            database.child("kelas").child(hasilScan).get().addOnSuccessListener {
+                val namakelas = it.child("namaKelas").value.toString()
+                val email = it.child("email").value.toString()
+                val kodemasuk = it.child("kodekelas").value.toString()
+                if(hasilScan==kodemasuk){
+                    val intent = Intent(this, ActivityAbsenKelas::class.java)
+                    intent.putExtra("email",email)
+                    intent.putExtra("namakelas",namakelas)
+                    intent.putExtra("kode",kodemasuk)
+                    TransisiActivity.transisiKeKanan_Finish(this,intent)
+                }else{
+                    val intent = Intent(this,ActivityBeranda::class.java)
+                    intent.putExtra("hasilScan", hasilScan)
+                    TransisiActivity.transisiKeBawah_Finish(this, intent)
+                }
+            }.addOnFailureListener{
+                val intent = Intent(this,ActivityBeranda::class.java)
+                intent.putExtra("hasilScan", hasilScan)
+                TransisiActivity.transisiKeBawah_Finish(this, intent)
+            }
         }else{
 
         }

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1080px"
+    android:layout_height="1080px">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAtas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTengah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <ImageView
+        android:id="@+id/logoHeader"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineAtas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <ImageView
+        android:id="@+id/headerKodeAbsen"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineAtas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kodeabsen_text" />
+
+    <ImageView
+        android:id="@+id/logo_user"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineNamaPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineNamaKelas"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <ImageView
+        android:id="@+id/logo_deskripsi"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineDeskripsiPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineNamaPemilik"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <ImageView
+        android:id="@+id/logo_waktu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineWaktuPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineDeskripsiPemilik"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <ImageView
+        android:id="@+id/gambar_kelas"
+        android:layout_width="1080px"
+        android:layout_height="607.5px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineAtas"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <ImageView
+        android:id="@+id/kodeQR"
+        android:layout_width="275px"
+        android:layout_height="275px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTengah"
+        app:srcCompat="@color/biruKodeAbsen" />
+
+    <TextView
+        android:id="@+id/kodeTeks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        android:text="0000-0000-0000"
+        android:textColor="@color/hitamKodeAbsen"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKiri"
+        app:layout_constraintTop_toBottomOf="@+id/kodeQR" />
+
+    <TextView
+        android:id="@+id/namaKelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Nama Kelas KodeAbsen"
+        android:textColor="@color/hitamKodeAbsen"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTengah" />
+
+    <TextView
+        android:id="@+id/namaPemilik"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:text="Nama Pemilik KodeAbsen"
+        android:textColor="@color/hitamKodeAbsen"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineNamaPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineNamaKelas" />
+
+    <TextView
+        android:id="@+id/deskripsiPemilik"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:text="Deskripsi KodeAbsen"
+        android:textColor="@color/hitamKodeAbsen"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineDeskripsiPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineNamaPemilik" />
+
+    <TextView
+        android:id="@+id/waktuPemilik"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:text="Valid hingga 00/00/0000"
+        android:textColor="@color/hitamKodeAbsen"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineWaktuPemilik"
+        app:layout_constraintStart_toStartOf="@+id/guidelineKanan"
+        app:layout_constraintTop_toTopOf="@+id/guidelineDeskripsiPemilik" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineKiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineKanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineNamaKelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineNamaPemilik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDeskripsiPemilik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineWaktuPemilik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
