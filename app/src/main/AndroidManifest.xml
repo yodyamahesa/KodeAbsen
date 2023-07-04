@@ -44,10 +44,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityAbsenKelas"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivitySplash"
+            android:screenOrientation="portrait"/>
 
 
         <activity
-            android:name=".ActivitySplash"
+            android:name=".ActivityEditProfil"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
