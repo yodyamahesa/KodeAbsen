@@ -90,13 +90,13 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/rektorat"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar"
-        tools:srcCompat="@drawable/rektorat" />
+        app:layout_constraintTop_toBottomOf="@+id/AtasNavbar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -149,8 +149,8 @@
         android:layout_height="wrap_content"
         android:clickable="false"
         android:ems="10"
+        android:hint="Mata Kuliah"
         android:inputType="text"
-        android:text="Pemrograman Mobile"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -182,8 +182,8 @@
         android:layout_height="wrap_content"
         android:clickable="false"
         android:ems="10"
+        android:hint="Dosen"
         android:inputType="text"
-        android:text="Prof Yodya"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"

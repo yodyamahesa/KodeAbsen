@@ -122,7 +122,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/editTextText"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/icon_kunci" />
+        app:srcCompat="@drawable/icon_kunci"  android:layout_width="wrap_content"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"

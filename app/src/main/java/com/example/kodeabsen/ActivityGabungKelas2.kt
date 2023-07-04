@@ -7,13 +7,13 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
-class ActivityGabungKelas2 :AppCompatActivity(){
+class ActivityGabungKelas2 :AppCompatActivity() {
     private lateinit var matkulEditText: EditText
     private lateinit var dosenEditText: EditText
     private lateinit var okeButton: Button
     private lateinit var kembaliImageView: ImageView
 
-    private fun initComponents(){
+    private fun initComponents() {
         matkulEditText = findViewById(R.id.editText)
         dosenEditText = findViewById(R.id.editTextText2)
         okeButton = findViewById(R.id.oke_RegisterDone_Button2)
@@ -27,11 +27,13 @@ class ActivityGabungKelas2 :AppCompatActivity(){
 
         kembaliImageView.setOnClickListener {
             val intent = Intent(this, ActivityBeranda::class.java)
-            TransisiActivity.transisiKeBawah_Finish(this,intent)
+            TransisiActivity.transisiKeBawah_Finish(this, intent)
 
-        okeButton.setOnClickListener {
-            val intent = Intent(this, ActivityGabungKelas4::class.java)
-            TransisiActivity.transisiKeKanan_Finish(this,intent)
+            okeButton.setOnClickListener {
+                val intent = Intent(this, ActivityGabungKelas4::class.java)
+                TransisiActivity.transisiKeKanan_Finish(this, intent)
             }
+        }
+    }
 }
 

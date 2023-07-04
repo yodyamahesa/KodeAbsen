@@ -1,6 +1,8 @@
 package com.example.kodeabsen
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,11 +13,12 @@ class ActivityAbsenKelas:AppCompatActivity() {
     private lateinit var kode: String
     private lateinit var namakelasEditText: EditText
     private lateinit var emailKelasEditText: EditText
+    private lateinit var okeButton: Button
 
-
-    fun initComponents(){
+    fun initComponents() {
         namakelasEditText = findViewById(R.id.editText)
         emailKelasEditText = findViewById(R.id.editTextText2)
+        okeButton = findViewById(R.id.oke_RegisterDone_Button2)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,10 +33,16 @@ class ActivityAbsenKelas:AppCompatActivity() {
         }
 
         initComponents()
-
         namakelasEditText.setText(namakelas)
         emailKelasEditText.setText(email)
 
-    }
+        okeButton.setOnClickListener {
+            val intent = Intent(this, ActivityAbsenKelas2::class.java)
+            TransisiActivity.transisiKeBawah_Finish(this, intent)
 
+
+
+        }
+
+    }
 }
