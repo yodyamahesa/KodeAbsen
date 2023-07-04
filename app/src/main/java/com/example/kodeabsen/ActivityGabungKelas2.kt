@@ -6,24 +6,23 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
-class ActivityGabungKelas :AppCompatActivity (){
-
-    private lateinit var kodeGabungEditText: EditText
+class ActivityGabungKelas2 :AppCompatActivity(){
+    private lateinit var matkulEditText: EditText
+    private lateinit var dosenEditText: EditText
     private lateinit var okeButton: Button
     private lateinit var kembaliImageView: ImageView
 
     private fun initComponents(){
-        kodeGabungEditText = findViewById(R.id.editTextText)
+        matkulEditText = findViewById(R.id.editText)
+        dosenEditText = findViewById(R.id.editTextText2)
         okeButton = findViewById(R.id.oke_RegisterDone_Button2)
         kembaliImageView = findViewById(R.id.imageView11)
-
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_gabungkelas_1)
+        setContentView(R.layout.activity_gabungkelas_2)
         initComponents()
 
         kembaliImageView.setOnClickListener {
@@ -31,7 +30,8 @@ class ActivityGabungKelas :AppCompatActivity (){
             TransisiActivity.transisiKeBawah_Finish(this,intent)
 
         okeButton.setOnClickListener {
-            val intent = Intent(this, ActivityGabungKelas2::class.java)
+            val intent = Intent(this, ActivityGabungKelas4::class.java)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
-        }
+            }
 }
+
