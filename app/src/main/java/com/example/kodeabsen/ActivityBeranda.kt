@@ -38,14 +38,13 @@ class ActivityBeranda: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda)
 
+        initComponents()
+
         val extras = intent.extras
         if (extras != null) {
             email = (extras.getString("email")).toString()
             QrString = (extras.getString("hasilScan")).toString()
         }
-
-        initComponents()
-
         if(QrString != ""){
             qrStringToBitmap()
             cobaImageView.setImageBitmap(QrBitmap)

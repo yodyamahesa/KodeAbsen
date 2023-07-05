@@ -85,7 +85,7 @@ class ActivityAbsenKode: AppCompatActivity() {
 //                    TransisiActivity.transisiKeKiri_Finish(this,intent)
                 }
             }.addOnFailureListener{
-                Log.i("ini yod nilainya","failure dia")
+
             }
 
 //            kodeTextView.setText(namakelas)

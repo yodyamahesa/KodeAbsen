@@ -21,7 +21,6 @@ class ActivityRegister: AppCompatActivity() {
     private lateinit var daftarButton: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
-    private var asa: String = "yodya@gmail.com"
 
     private fun initComponnents(){
         usernameRegisterEditText = findViewById(R.id.username_Register_EditText)
