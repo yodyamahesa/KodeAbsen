@@ -19,6 +19,7 @@ class ActivityBuatKelas1: AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private lateinit var tes: String
     private lateinit var email: String
+    private lateinit var emailku: String
     private fun initComponents(){
         masukkangambarImageView = findViewById(R.id.imageView9)
         namakelasTextView = findViewById(R.id.editTextText)
@@ -37,15 +38,16 @@ class ActivityBuatKelas1: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buatkelas_1)
 
+        initComponents()
+
         val extras = intent.extras
         if (extras != null) {
             email = (extras.getString("email")).toString()
         }
 
-        initComponents()
-
         kembaliImageView.setOnClickListener {
             val intent = Intent(this, ActivityBeranda::class.java)
+            intent.putExtra("email",email)
             TransisiActivity.transisiKeBawah_Finish(this,intent)
 
         }
@@ -53,6 +55,7 @@ class ActivityBuatKelas1: AppCompatActivity() {
         okeButton.setOnClickListener {
             writeNewKelas(namakelasTextView.text.toString(),email)
             val intent = Intent(this, ActivityBuatKelas3::class.java)
+            intent.putExtra("email",email)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
 //            database.child("users").child("useridnya").get().addOnSuccessListener {
 //                Log.i("firebase", "Got value ${it.value}")

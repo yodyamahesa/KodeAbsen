@@ -50,7 +50,6 @@ class ActivityBeranda: AppCompatActivity() {
             cobaImageView.setImageBitmap(QrBitmap)
         }
 
-
         profileImageView.setOnClickListener {
             val intent = Intent(this, ActivityProfile::class.java)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
@@ -58,6 +57,7 @@ class ActivityBeranda: AppCompatActivity() {
 
         absenImageView.setOnClickListener {
             val intent = Intent(this, ActivityAbsenQR::class.java)
+            intent.putExtra("email",email)
             TransisiActivity.transisiKeAtas_Finish(this,intent)
         }
 

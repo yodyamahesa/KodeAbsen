@@ -157,4 +157,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AtasNavbar" />
 
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/BawahNavbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineAtasNavbar"
+        app:srcCompat="@drawable/icon_maskot" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

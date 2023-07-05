@@ -1,5 +1,6 @@
 package com.example.kodeabsen
 
+import AbsenKelas
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -26,6 +27,7 @@ class ActivityAbsenKode: AppCompatActivity() {
     private lateinit var kodeTextView: EditText
     private lateinit var database: DatabaseReference
     private lateinit var kode: String
+    private lateinit var emailku: String
 
     fun gatau(){
         database.addValueEventListener(object : ValueEventListener {
@@ -57,6 +59,11 @@ class ActivityAbsenKode: AppCompatActivity() {
 
         initComponents()
 
+        val extras = intent.extras
+        if (extras != null) {
+            emailku = (extras.getString("email")).toString()
+        }
+
         tombolKembaliImageView.setOnClickListener {
             val intent = Intent(this, ActivityBeranda::class.java)
             TransisiActivity.transisiKeBawah_Finish(this, intent)
@@ -73,14 +80,16 @@ class ActivityAbsenKode: AppCompatActivity() {
                 val namakelas = it.child("namaKelas").value.toString()
                 val email = it.child("email").value.toString()
                 val kodemasuk = it.child("kodekelas").value.toString()
+
                 if(kode==kodemasuk){
                     val intent = Intent(this, ActivityAbsenKelas::class.java)
                     intent.putExtra("email",email)
                     intent.putExtra("namakelas",namakelas)
-                    intent.putExtra("kode",kodemasuk)
+                    intent.putExtra("kode",kode)
+                    intent.putExtra("emailku",emailku)
                     TransisiActivity.transisiKeKanan_Finish(this,intent)
                 }else{
-//                    kodeTextView.setText(namakelas)
+//          .          kodeTextView.setText(namakelas)
 //                    val intent = Intent(this, ActivityBeranda::class.java)
 //                    TransisiActivity.transisiKeKiri_Finish(this,intent)
                 }

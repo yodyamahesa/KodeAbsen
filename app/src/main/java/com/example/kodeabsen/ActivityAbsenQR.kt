@@ -25,7 +25,8 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
     private lateinit var hasilScan: String
     private lateinit var kodemasuk: String
     private lateinit var database: DatabaseReference
-
+    private lateinit var email: String
+    private lateinit var emailku: String
     private var flash = false;
 
     private fun initComponents(){
@@ -73,6 +74,11 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
         initComponents()
         initScannerView()
 
+        val extras = intent.extras
+        if (extras != null) {
+            emailku = (extras.getString("email")).toString()
+        }
+
         tombolFlashImageView.setOnClickListener{
             if(flash==false){
                 mScannerView.flash = true
@@ -92,6 +98,7 @@ class ActivityAbsenQR: AppCompatActivity(), ZXingScannerView.ResultHandler {
 
         tombolAbsenKodeImageView.setOnClickListener {
             val intent = Intent(this, ActivityAbsenKode::class.java)
+            intent.putExtra("email",emailku)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
         }
     }

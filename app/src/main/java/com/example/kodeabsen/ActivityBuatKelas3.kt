@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 class ActivityBuatKelas3: AppCompatActivity() {
 
     private lateinit var okeButton: Button
+    private lateinit var emailku: String
     fun initcomponents(){
         okeButton = findViewById(R.id.oke_RegisterDone_Button2)
     }
@@ -20,8 +21,14 @@ class ActivityBuatKelas3: AppCompatActivity() {
 
         initcomponents()
 
+        val extras = intent.extras
+        if (extras != null) {
+            emailku = (extras.getString("email")).toString()
+        }
+
         okeButton.setOnClickListener {
             val intent = Intent(this, ActivityBeranda::class.java)
+            intent.putExtra("email",emailku)
             TransisiActivity.transisiKeBawah_Finish(this,intent)
         }
     }

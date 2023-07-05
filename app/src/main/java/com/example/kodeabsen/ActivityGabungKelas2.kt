@@ -40,7 +40,7 @@ class ActivityGabungKelas2 :AppCompatActivity() {
 
     fun writeJoinPengguna(kode: String) {
         val join = JoinPengguna.join(kode)
-        database.child("pengguna").child(kode).child("pengguna").child(email.replace(".",",")).setValue(email)
+        database.child("pengguna").child(email.replace(".",",")).child(kode).setValue(email)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +67,7 @@ class ActivityGabungKelas2 :AppCompatActivity() {
 
         okeButton.setOnClickListener {
             writeJoinKelas(emailku)
+            writeJoinPengguna(kode)
             val intent = Intent(this, ActivityGabungKelas4::class.java)
             intent.putExtra("email",emailku)
             TransisiActivity.transisiKeKanan_Finish(this, intent)

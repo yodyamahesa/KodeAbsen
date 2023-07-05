@@ -14,6 +14,7 @@ class ActivityBuatKelas2: AppCompatActivity() {
     private lateinit var editTextText: TextView
     private lateinit var oke_RegisterDone_Button2: Button
     private lateinit var imageView11: ImageView
+    private lateinit var emailku: String
 
     fun initcomponents(){
         editTextText = findViewById(R.id.editTextText)
@@ -27,8 +28,14 @@ class ActivityBuatKelas2: AppCompatActivity() {
 
         initcomponents()
 
+        val extras = intent.extras
+        if (extras != null) {
+            emailku = (extras.getString("email")).toString()
+        }
+
         oke_RegisterDone_Button2.setOnClickListener {
             val intent = Intent(this, ActivityBuatKelas3::class.java)
+            intent.putExtra("email",emailku)
             TransisiActivity.transisiKeKanan_Finish(this,intent)
         }
     }
